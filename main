@@ -1,0 +1,23 @@
+// ==UserScript==
+// @name         Canvas Autodone
+// @namespace    http://tampermonkey.net/
+// @version      0.1
+// @description  Clicks the "Mark as done" button automatically
+// @author       SpaceNerden
+
+// @match        https://tasupport.co1.qualtrics.com/jfe/form/SV_0qez6NHJGoCAmMt
+// @match        https://tasupport.co1.qualtrics.com/jfe2/form/SV_0qez6NHJGoCAmMt/next?rand=775440350&tid=1&t=1547858208474
+// @require     http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js
+// @require     https://gist.github.com/raw/2625891/waitForKeyElements.js
+// @grant       GM_addStyle
+// ==/UserScript==
+
+const fire = () => Array.from(document.querySelectorAll('label > span')).find(e => e.textContent === 'Mark as done').parentElement.click();
+
+// another option
+// const fire = () => document.getElementById('QID2-1-label').click();
+
+waitForKeyElements (
+    "#QID2-1-label",
+    fire
+);
