@@ -4,8 +4,8 @@
 // @version      1.0
 // @description  Clicks the "Mark as done" button automatically
 // @author       SpaceNerden
-// @match        https://dlsl.instructure.com/*
-// @match        http://dlsl.instructure.com/*
+// @match        https://domain.instructure.com/*
+// @match        http://domain.instructure.com/*
 // @require      http://code.jquery.com/jquery-3.6.0.js
 /* globals jQuery, $, waitForKeyElements */
 
